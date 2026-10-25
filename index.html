@@ -105,8 +105,6 @@
   .add-contact svg { width: 18px; height: 18px; }
   .add-contact:hover { color: var(--orange-ink); }
   .phone-big small { display: block; font: 500 14px/1.4 "Public Sans", sans-serif; color: var(--ink-soft); letter-spacing: .02em; }
-  .email-line { margin: 8px 0 0; font-size: 16px; color: var(--ink-soft); }
-  .email-line a { color: var(--pine); font-weight: 700; text-underline-offset: 3px; }
   .hero figure { margin: 0; }
   .hero figure img { border-radius: 26px; aspect-ratio: 4/3.4; object-fit: cover; width: 100%; box-shadow: 0 30px 60px -30px rgba(31,42,34,.45); }
   @media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } }
@@ -224,8 +222,6 @@
           <span class="num">(850) 508-3315</span>
           <button type="button" class="copy" data-copy="(850) 508-3315" aria-label="Copy phone number">Copy</button>
         </div>
-        <p class="email-line"><a href="mailto:pineyz-help@googlegroups.com">pineyz-help@googlegroups.com</a>
-          <button type="button" class="copy copy-sm" data-copy="pineyz-help@googlegroups.com" aria-label="Copy email address">Copy</button></p>
         <a class="add-contact" href="piney-z-help.vcf" download="Piney-Z Help.vcf">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a7 7 0 0 1 12.5-4.3"/><path d="M19 14v6"/><path d="M16 17h6"/></svg>
           Add to contacts
@@ -272,7 +268,7 @@
         </div>
         <div class="list-box" id="loop">
           <h3>Just listen in</h3>
-          <p>No commitment. Join our email list to hear what's going on and when a neighbor could use a hand. If something comes up that you can help with, great.</p>
+          <p>No commitment. Piney-Z Help also has a discussion board, run as an email list, where neighbors and volunteers talk things over. Join to read along, and chime in whenever you like.</p>
           <a class="btn btn-orange" href="https://groups.google.com/g/pineyz-help" target="_blank" rel="noopener">Join the email list</a>
           <p class="small">Joining online uses a Google account. Don't have one? Text Rick your email address and he'll add you.</p>
         </div>
@@ -321,7 +317,6 @@
       ac.href = 'intent:#Intent;action=android.intent.action.INSERT;type=vnd.android.cursor.dir/contact' +
         ';S.name=' + e('Piney-Z Help') +
         ';S.phone=' + e('+18505083315') +
-        ';S.email=' + e('pineyz-help@googlegroups.com') +
         ';S.company=' + e('Piney-Z Help') +
         ';S.job_title=' + e('Rick Hays, Coordinator') +
         ';S.browser_fallback_url=' + e(location.origin + '/piney-z-help.vcf') + ';end';
