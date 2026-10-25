@@ -81,7 +81,7 @@
   /* Hero */
   .hero { padding: 56px 0 72px; }
   .hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
-  .hero h1 { font-size: clamp(44px, 7vw, 84px); font-weight: 800; }
+  .hero h1 { font-size: clamp(38px, 5.6vw, 66px); font-weight: 800; }
   .hero h1 em { font-style: italic; color: var(--pine-2); }
   .hero p.lead { margin: 22px 0 30px; }
   .hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -89,6 +89,13 @@
     display: block; margin-top: 26px; font-family: "Fraunces", serif; font-weight: 800;
     font-size: clamp(30px, 4vw, 40px); text-decoration: none; color: var(--pine);
   }
+  .phone-big .num { user-select: all; -webkit-user-select: all; cursor: text; }
+  .copy {
+    margin-left: 10px; vertical-align: middle; font: 700 14px/1 "Public Sans", sans-serif;
+    padding: 7px 12px; border-radius: 999px; border: 1.5px solid var(--pine); background: transparent;
+    color: var(--pine); cursor: pointer;
+  }
+  .copy:hover { background: var(--pine); color: #fff; }
   .phone-big small { display: block; font: 500 14px/1.4 "Public Sans", sans-serif; color: var(--ink-soft); letter-spacing: .02em; }
   .email-line { margin: 8px 0 0; font-size: 16px; color: var(--ink-soft); }
   .email-line a { color: var(--pine); font-weight: 700; text-underline-offset: 3px; }
@@ -190,10 +197,11 @@
             Text
           </a>
         </div>
-        <a class="phone-big" href="tel:+18505083315">
+        <div class="phone-big">
           <small>Rick Hays, Coordinator</small>
-          (850) 508-3315
-        </a>
+          <span class="num">(850) 508-3315</span>
+          <button type="button" class="copy" data-copy="(850) 508-3315" aria-label="Copy phone number">Copy</button>
+        </div>
         <p class="email-line">Or email <a href="mailto:pineyz-help@googlegroups.com">pineyz-help@googlegroups.com</a></p>
       </div>
       <figure>
@@ -281,5 +289,22 @@
   </div>
 </footer>
 
+<script>
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      var done = function () { btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = 'Copy'; }, 1800); };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done, function () { fallback(); });
+      } else { fallback(); }
+      function fallback() {
+        var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  });
+</script>
 </body>
 </html>
