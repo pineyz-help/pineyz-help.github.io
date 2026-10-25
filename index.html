@@ -96,6 +96,14 @@
     color: var(--pine); cursor: pointer;
   }
   .copy:hover { background: var(--pine); color: #fff; }
+  .copy-sm { font-size: 12px; padding: 4px 9px; margin-left: 6px; }
+  .add-contact {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 14px;
+    font-weight: 700; font-size: 15px; color: var(--pine); text-decoration: none;
+    border-bottom: 1.5px solid currentColor; padding-bottom: 1px;
+  }
+  .add-contact svg { width: 18px; height: 18px; }
+  .add-contact:hover { color: var(--orange-ink); }
   .phone-big small { display: block; font: 500 14px/1.4 "Public Sans", sans-serif; color: var(--ink-soft); letter-spacing: .02em; }
   .email-line { margin: 8px 0 0; font-size: 16px; color: var(--ink-soft); }
   .email-line a { color: var(--pine); font-weight: 700; text-underline-offset: 3px; }
@@ -203,7 +211,12 @@
           <span class="num">(850) 508-3315</span>
           <button type="button" class="copy" data-copy="(850) 508-3315" aria-label="Copy phone number">Copy</button>
         </div>
-        <p class="email-line">Or email <a href="mailto:pineyz-help@googlegroups.com">pineyz-help@googlegroups.com</a></p>
+        <p class="email-line">Or email <a href="mailto:pineyz-help@googlegroups.com">pineyz-help@googlegroups.com</a>
+          <button type="button" class="copy copy-sm" data-copy="pineyz-help@googlegroups.com" aria-label="Copy email address">Copy</button></p>
+        <a class="add-contact" href="piney-z-help.vcf" download="Piney-Z Help.vcf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a7 7 0 0 1 12.5-4.3"/><path d="M19 14v6"/><path d="M16 17h6"/></svg>
+          Add to contacts
+        </a>
       </div>
       <figure>
         <img src="img/hero-chainsaw.jpg" alt="Two volunteers kneeling in a yard, working on a piece of equipment together">
