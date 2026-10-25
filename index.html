@@ -89,6 +89,7 @@
     display: block; margin-top: 26px; font-family: "Fraunces", serif; font-weight: 800;
     font-size: clamp(30px, 4vw, 40px); text-decoration: none; color: var(--pine);
   }
+  .phone-big small.coord { margin-top: 4px; }
   .phone-big .num { user-select: all; -webkit-user-select: all; cursor: text; }
   .copy {
     margin-left: 10px; vertical-align: middle; font: 700 14px/1 "Public Sans", sans-serif;
@@ -171,6 +172,9 @@
     font-family: "Fraunces", serif; font-weight: 800; font-size: 20px;
   }
   @media (max-width: 560px) { .step { padding-left: 24px; padding-top: 74px; } .step-n { left: 24px; } }
+  .discussion { background: var(--paper-2); }
+  .discussion .small-note { color: var(--ink-soft); }
+  .join .skills { margin: 22px 0 28px; }
   .small-note { margin: 14px 0 0; font-size: 14px; color: #c3c9c0; }
   .list-box h3 { color: #fff; margin-bottom: 8px; }
   .list-box p { margin: 0 0 18px; color: #c3c9c0; font-size: 16px; }
@@ -191,9 +195,9 @@
   <div class="wrap">
     <a class="brand" href="#">Piney-Z <span class="tag">Help</span></a>
     <nav>
-      <a href="#about">About</a>
+      <a href="#about">Ask for help</a>
       <a href="#volunteer">Volunteer</a>
-      <a href="#loop">Or just listen in</a>
+      <a href="#discussion">Join the discussion</a>
       <a href="#done">What we've done</a>
     </nav>
     <a class="btn btn-orange" href="tel:+18505083315">Call</a>
@@ -218,9 +222,10 @@
           </a>
         </div>
         <div class="phone-big">
-          <small>Rick Hays, Coordinator</small>
+          <small>Call Piney-Z Help</small>
           <span class="num">(850) 508-3315</span>
           <button type="button" class="copy" data-copy="(850) 508-3315" aria-label="Copy phone number">Copy</button>
+          <small class="coord">Rick Hays, Coordinator</small>
         </div>
         <a class="add-contact" href="piney-z-help.vcf" download="Piney-Z Help.vcf">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a7 7 0 0 1 12.5-4.3"/><path d="M19 14v6"/><path d="M16 17h6"/></svg>
@@ -235,43 +240,35 @@
 
   <section class="when" id="about">
     <div class="wrap">
+      <div class="eyebrow">Ask for help</div>
       <h2>Nobody should have to go it alone.</h2>
       <p class="lead">Life sometimes catches us off guard. When it does, it helps to know there are people nearby who'll pitch in. That's all this is: neighbors looking out for each other.</p>
       <div class="fine">
         <div><b>Free.</b> We're neighbors, not a business.</div>
         <div><b>For everyone.</b> Every street, every household in Piney-Z, no matter who you are or how long you've lived here.</div>
-        <div><b>Just ask.</b> Call or text, and we'll see what we can do.</div>
+        <div><b>Just ask.</b> Call or text (850) 508-3315, and we'll see what we can do.</div>
       </div>
     </div>
   </section>
 
 
-  <section class="join" id="join">
+  <section class="join" id="volunteer">
     <div class="wrap">
       <div>
-        <div class="eyebrow">Get involved</div>
-        <h2>As much or as little as you like.</h2>
-        <div class="list-box" id="volunteer">
-          <h3>Volunteer</h3>
-          <p>Got a truck, tools, or hands? Tell Rick what you're good at, and he'll call you when something comes up that fits. No special skills needed, just a willingness to show up.</p>
-          <ul class="skills">
-            <li>💪 An extra pair of hands</li>
-            <li>🛻 Have a truck</li>
-            <li>🚗 Can drive</li>
-            <li>🍲 Can cook</li>
-            <li>🐕 Good with pets</li>
-            <li>🔧 Handy</li>
-            <li>💻 Tech</li>
-            <li>☎️ Checking in on folks</li>
-          </ul>
-          <a class="btn btn-orange" href="tel:+18505083315">Call or Text Rick (850) 508-3315</a>
-        </div>
-        <div class="list-box" id="loop">
-          <h3>Just listen in</h3>
-          <p>No commitment. Piney-Z Help also has a discussion board, run as an email list, where neighbors and volunteers talk things over. Join to read along, and chime in whenever you like.</p>
-          <a class="btn btn-orange" href="https://groups.google.com/g/pineyz-help" target="_blank" rel="noopener">Join the email list</a>
-          <p class="small">Joining online uses a Google account. Don't have one? Text Rick your email address and he'll add you.</p>
-        </div>
+        <div class="eyebrow">Volunteer</div>
+        <h2>Lend a hand.</h2>
+        <p class="lead">Got a truck, tools, or hands? Tell us what you're good at, and we'll call you when something comes up that fits. No special skills needed, just a willingness to show up.</p>
+        <ul class="skills">
+          <li>💪 An extra pair of hands</li>
+          <li>🛻 Have a truck</li>
+          <li>🚗 Can drive</li>
+          <li>🍲 Can cook</li>
+          <li>🐕 Good with pets</li>
+          <li>🔧 Handy</li>
+          <li>💻 Tech</li>
+          <li>☎️ Checking in on folks</li>
+        </ul>
+        <a class="btn btn-orange" href="tel:+18505083315">Call or Text (850) 508-3315</a>
       </div>
       <div class="keytag">
         <img src="img/keychain.jpg" alt="An orange 3D-printed keychain on a key ring reading Rick Hays, 850 508 3315, pineyz-help.org">
@@ -279,6 +276,18 @@
       </div>
     </div>
   </section>
+  <section class="discussion" id="discussion">
+    <div class="wrap">
+      <div class="eyebrow">Join the discussion</div>
+      <h2>Anyone can join.</h2>
+      <p class="lead">Piney-Z Help has a discussion forum, run as an email list, where neighbors and volunteers talk things over: who has a truck free on Saturday, how a job went, ideas for the neighborhood. No commitment. Read along, and chime in whenever you like.</p>
+      <div style="margin-top:26px">
+        <a class="btn btn-orange" href="https://groups.google.com/g/pineyz-help" target="_blank" rel="noopener">Join the discussion</a>
+      </div>
+      <p class="small-note">Joining online uses a Google account. Don't have one? Text (850) 508-3315 your email address and we'll add you.</p>
+    </div>
+  </section>
+
   <section id="done">
     <div class="wrap">
       <div class="eyebrow">What we've done</div>
@@ -301,7 +310,8 @@
     <div>
       <b style="color:var(--ink)">Piney-Z Help</b> · Since 2026 · Rick Hays, Coordinator · pineyz-help.org<br>
       An independent volunteer effort by Piney-Z neighbors.<br>
-      Not affiliated with the Piney-Z HOA or CDD.
+      Not affiliated with the Piney-Z HOA or CDD.<br>
+      IT support by Chris.
     </div>
     <div class="em">For emergencies call <b>911</b></div>
   </div>
