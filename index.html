@@ -141,7 +141,12 @@
     font-size: 13px; letter-spacing: .1em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px;
   }
   .ba .label.after { background: var(--orange); }
-  .ba-date { margin: 32px 0 -20px; font-size: 24px; color: var(--pine); }
+  .gallery { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .gallery::after { content: ""; flex-grow: 999; }
+  .gallery a { flex: var(--r) 1 calc(var(--r) * 210px); display: block; }
+  .gallery img { width: 100%; height: auto; display: block; border-radius: 10px; }
+  @media (max-width: 560px) { .gallery a { flex-basis: calc(var(--r) * 130px); } }
+  .ba-date { margin: 32px 0 0; font-size: 24px; color: var(--pine); }
   .strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
   .strip img { border-radius: var(--radius); aspect-ratio: 1; object-fit: cover; width: 100%; }
   @media (max-width: 760px) {
@@ -274,20 +279,24 @@
       <div class="eyebrow">What we've done</div>
       <h2>Neighbors at work.</h2>
       <h3 class="ba-date">October 24, 2026</h3>
-      <div class="ba">
-        <figure>
-          <img src="img/tree-before.jpg" alt="A large fallen pine lying across brush at the edge of a lawn">
-          <span class="label">Before</span>
-        </figure>
-        <figure>
-          <img src="img/tree-after.jpg" alt="The same pine cut into log rounds lined up under the trees">
-          <span class="label after">After</span>
-        </figure>
-      </div>
-      <div class="strip">
-        <img src="img/rick-wheelbarrow.jpg" alt="A volunteer pulling a wheelbarrow past a pile of split firewood">
-        <img src="img/volunteer-logs.jpg" alt="A volunteer in work gloves checking split logs">
-        <img src="img/crew-wide.jpg" alt="Two volunteers kneeling over a chainsaw next to a generator in a yard">
+      <div class="gallery">
+        <a href="img/2026-10-24/01.jpg" target="_blank" rel="noopener" style="--r:0.750"><img src="img/2026-10-24/01.jpg" width="480" height="640" alt="The lawn and brush line behind the house before the work" loading="lazy"></a>
+        <a href="img/2026-10-24/02.jpg" target="_blank" rel="noopener" style="--r:0.750"><img src="img/2026-10-24/02.jpg" width="480" height="640" alt="A fallen pine lying across the brush at the edge of the lawn" loading="lazy"></a>
+        <a href="img/2026-10-24/03.jpg" target="_blank" rel="noopener" style="--r:0.750"><img src="img/2026-10-24/03.jpg" width="480" height="640" alt="The fallen pine half hidden in the undergrowth" loading="lazy"></a>
+        <a href="img/2026-10-24/04.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/04.jpg" width="1500" height="1129" alt="Two volunteers fixing a chainsaw chain next to a generator" loading="lazy"></a>
+        <a href="img/2026-10-24/05.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/05.jpg" width="1500" height="1129" alt="Two volunteers kneeling over the chainsaw, logs behind them" loading="lazy"></a>
+        <a href="img/2026-10-24/06.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/06.jpg" width="1500" height="1129" alt="Putting the chain back on the saw" loading="lazy"></a>
+        <a href="img/2026-10-24/07.jpg" target="_blank" rel="noopener" style="--r:1.328"><img src="img/2026-10-24/07.jpg" width="1125" height="847" alt="Cut log rounds lined up under the trees" loading="lazy"></a>
+        <a href="img/2026-10-24/08.jpg" target="_blank" rel="noopener" style="--r:1.328"><img src="img/2026-10-24/08.jpg" width="1125" height="847" alt="Log rounds and cleared brush in the woods" loading="lazy"></a>
+        <a href="img/2026-10-24/09.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/09.jpg" width="1129" height="1500" alt="A volunteer coiling an extension cord next to the generator and saws" loading="lazy"></a>
+        <a href="img/2026-10-24/10.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/10.jpg" width="1129" height="1500" alt="A volunteer bending over a log among the trees" loading="lazy"></a>
+        <a href="img/2026-10-24/11.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/11.jpg" width="1129" height="1500" alt="A volunteer checking cut log rounds" loading="lazy"></a>
+        <a href="img/2026-10-24/12.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/12.jpg" width="1129" height="1500" alt="A volunteer looking over a split log" loading="lazy"></a>
+        <a href="img/2026-10-24/13.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/13.jpg" width="1500" height="1129" alt="A volunteer walking back from the woods past the generator and saws" loading="lazy"></a>
+        <a href="img/2026-10-24/14.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/14.jpg" width="1129" height="1500" alt="A volunteer pulling a wheelbarrow past the firewood pile" loading="lazy"></a>
+        <a href="img/2026-10-24/15.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/15.jpg" width="1129" height="1500" alt="Two volunteers packing up cords and the wheelbarrow" loading="lazy"></a>
+        <a href="img/2026-10-24/16.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/16.jpg" width="1129" height="1500" alt="A volunteer smiling, coiling a red extension cord" loading="lazy"></a>
+        <a href="img/2026-10-24/17.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/17.jpg" width="1500" height="1129" alt="Two volunteers chatting in the yard after the job" loading="lazy"></a>
       </div>
     </div>
   </section>
