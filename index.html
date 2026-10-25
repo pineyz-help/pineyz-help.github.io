@@ -134,7 +134,9 @@
   /* What we've done */
   .ba { display: grid; grid-template-columns: 1fr 1.6fr; gap: 16px; margin-top: 20px; height: 520px; }
   .ba a, .ba figure { display: block; height: 100%; }
-  .ba + .gallery { margin-top: 16px; }
+  .gallery.big::after { display: none; }
+  .gallery.big a { flex-basis: calc(var(--r) * 420px); }
+  @media (max-width: 560px) { .gallery.big a { flex-basis: calc(var(--r) * 240px); } }
   .ba figure { margin: 0; position: relative; }
   .ba img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); max-height: 520px; }
   .ba .label {
@@ -296,19 +298,11 @@
       <div class="eyebrow">What we've done</div>
       <h2>Neighbors at work.</h2>
       <h3 class="ba-date">October 24, 2026</h3>
-      <div class="ba">
-        <a href="img/2026-10-24/02.jpg" target="_blank" rel="noopener"><figure>
-          <img src="img/2026-10-24/02.jpg" alt="A fallen pine lying across the brush at the edge of the lawn">
-          <span class="label">Before</span>
-        </figure></a>
-        <a href="img/2026-10-24/07.jpg" target="_blank" rel="noopener"><figure>
-          <img src="img/2026-10-24/07.jpg" alt="Cut log rounds lined up under the trees">
-          <span class="label after">After</span>
-        </figure></a>
-      </div>
-      <div class="gallery">
+      <div class="gallery big">
+        <a href="img/2026-10-24/02.jpg" target="_blank" rel="noopener" style="--r:0.750"><img src="img/2026-10-24/02.jpg" width="480" height="640" alt="A fallen pine lying across the brush at the edge of the lawn" loading="lazy"></a>
         <a href="img/2026-10-24/05.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/05.jpg" width="1500" height="1129" alt="Two volunteers kneeling over the chainsaw, logs behind them" loading="lazy"></a>
         <a href="img/2026-10-24/16.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/16.jpg" width="1129" height="1500" alt="A volunteer smiling, coiling a red extension cord" loading="lazy"></a>
+        <a href="img/2026-10-24/07.jpg" target="_blank" rel="noopener" style="--r:1.328"><img src="img/2026-10-24/07.jpg" width="1125" height="847" alt="Cut log rounds lined up under the trees" loading="lazy"></a>
         <a href="img/2026-10-24/14.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/14.jpg" width="1129" height="1500" alt="A volunteer pulling a wheelbarrow past the firewood pile" loading="lazy"></a>
         <a href="img/2026-10-24/13.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/13.jpg" width="1500" height="1129" alt="A volunteer walking back from the woods past the generator and saws" loading="lazy"></a>
       </div>
