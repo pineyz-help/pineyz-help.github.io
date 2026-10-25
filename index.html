@@ -182,6 +182,21 @@
   .join .skills { margin: 22px 0 28px; }
   .join-email { margin: 24px 0 0; font-size: 18px; }
   .join-email a { color: var(--pine); font-weight: 700; text-underline-offset: 3px; }
+  dialog#board-dialog {
+    border: none; border-radius: var(--radius); padding: 28px; max-width: 460px; width: calc(100% - 32px);
+    background: var(--paper); color: var(--ink); box-shadow: 0 30px 80px -20px rgba(0,0,0,.45);
+  }
+  dialog#board-dialog::backdrop { background: rgba(31,42,34,.55); }
+  #board-dialog h3 { font-size: 24px; margin-bottom: 8px; }
+  #board-dialog p { margin: 0 0 12px; color: var(--ink-soft); }
+  #board-dialog ol { margin: 0 0 16px; padding-left: 22px; }
+  #board-dialog li { margin: 0 0 12px; }
+  #board-dialog li span { display: block; margin-bottom: 6px; }
+  #board-dialog li img { display: block; height: 38px; width: auto; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.15); background: #fff; }
+  #board-dialog .alt { font-size: 15px; }
+  #board-dialog .alt a { color: var(--pine); font-weight: 700; }
+  .dlg-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+  .dlg-actions .btn-ghost { color: var(--ink); background: transparent; font: inherit; font-weight: 700; cursor: pointer; }
   .small-note { margin: 14px 0 0; font-size: 14px; color: #c3c9c0; }
   .list-box h3 { color: #fff; margin-bottom: 8px; }
   .list-box p { margin: 0 0 18px; color: #c3c9c0; font-size: 16px; }
@@ -290,9 +305,8 @@
         <button type="button" class="copy copy-sm" data-copy="pineyz-help@googlegroups.com" aria-label="Copy email address">Copy</button><br>
         or join the online discussion board:</p>
       <div style="margin-top:14px">
-        <a class="btn btn-orange" href="https://groups.google.com/g/pineyz-help/about" target="_blank" rel="noopener">Online discussion board</a>
+        <a class="btn btn-orange" id="board-btn" href="https://groups.google.com/g/pineyz-help/about" target="_blank" rel="noopener">Online discussion board</a>
       </div>
-      <p class="small-note">Sign in to Google, then click "Ask to join group."</p>
     </div>
   </section>
 
@@ -325,7 +339,29 @@
   </div>
 </footer>
 
+<dialog id="board-dialog" aria-labelledby="board-title">
+  <h3 id="board-title">Joining the discussion board</h3>
+  <p>The board runs on Google Groups. To join:</p>
+  <ol>
+    <li><span>Sign in to Google, top right:</span> <img src="img/google-sign-in.png" alt="Sign in" width="60" height="30"></li>
+    <li><span>Then click:</span> <img src="img/google-ask-to-join.png" alt="Ask to join group" width="100" height="25"></li>
+  </ol>
+  <p class="alt">No Google account? Email <a href="mailto:pineyz-help@googlegroups.com?subject=Please%20add%20me">pineyz-help@googlegroups.com</a> and we'll add you.</p>
+  <div class="dlg-actions">
+    <a class="btn btn-orange" href="https://groups.google.com/g/pineyz-help/about" target="_blank" rel="noopener">Go to the board</a>
+    <button type="button" class="btn btn-ghost" id="board-close">Close</button>
+  </div>
+</dialog>
+
 <script>
+  var dlg = document.getElementById('board-dialog');
+  var boardBtn = document.getElementById('board-btn');
+  if (dlg && boardBtn && typeof dlg.showModal === 'function') {
+    boardBtn.addEventListener('click', function (ev) { ev.preventDefault(); dlg.showModal(); });
+    document.getElementById('board-close').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (ev) { if (ev.target === dlg) dlg.close(); });
+    dlg.querySelector('.dlg-actions a').addEventListener('click', function () { dlg.close(); });
+  }
   // Android Chrome only downloads .vcf files; hand off to the Contacts app's "new contact" screen instead.
   if (/Android/i.test(navigator.userAgent)) {
     var ac = document.querySelector('.add-contact');
