@@ -192,6 +192,7 @@
   #board-dialog ol { margin: 0 0 16px; padding-left: 22px; }
   #board-dialog li { margin: 0 0 12px; }
   #board-dialog li span { display: block; margin-bottom: 6px; }
+  #board-dialog img.shot { display: block; height: 38px; width: auto; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.15); background: #fff; margin: 4px 0 4px; }
   #board-dialog li img { display: block; height: 38px; width: auto; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.15); background: #fff; }
   #board-dialog .alt { font-size: 15px; }
   #board-dialog .alt a { color: var(--pine); font-weight: 700; }
@@ -305,7 +306,7 @@
         <button type="button" class="copy copy-sm" data-copy="pineyz-help@googlegroups.com" aria-label="Copy email address">Copy</button><br>
         or join the online discussion board:</p>
       <div style="margin-top:14px">
-        <a class="btn btn-orange" id="board-btn" href="https://groups.google.com/g/pineyz-help/about" target="_blank" rel="noopener">Online discussion board</a>
+        <a class="btn btn-orange" id="board-btn" href="https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fgroups.google.com%2Fg%2Fpineyz-help%2Fabout" target="_blank" rel="noopener">Online discussion board</a>
       </div>
     </div>
   </section>
@@ -341,14 +342,12 @@
 
 <dialog id="board-dialog" aria-labelledby="board-title">
   <h3 id="board-title">Joining the discussion board</h3>
-  <p>The board runs on Google Groups. To join:</p>
-  <ol>
-    <li><span>Sign in to Google, top right:</span> <img src="img/google-sign-in.png" alt="Sign in" width="60" height="30"></li>
-    <li><span>Then click:</span> <img src="img/google-ask-to-join.png" alt="Ask to join group" width="100" height="25"></li>
-  </ol>
+  <p>The board runs on Google Groups. Google will ask you to sign in if you aren't already.</p>
+  <p>Then click this next to the group name:</p>
+  <p><img class="shot" src="img/google-ask-to-join.png" alt="Ask to join group" width="100" height="25"></p>
   <p class="alt">No Google account? Email <a href="mailto:pineyz-help@googlegroups.com?subject=Please%20add%20me">pineyz-help@googlegroups.com</a> and we'll add you.</p>
   <div class="dlg-actions">
-    <a class="btn btn-orange" href="https://groups.google.com/g/pineyz-help/about" target="_blank" rel="noopener">Go to the board</a>
+    <a class="btn btn-orange" href="https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fgroups.google.com%2Fg%2Fpineyz-help%2Fabout" target="_blank" rel="noopener">Go to the board</a>
     <button type="button" class="btn btn-ghost" id="board-close">Close</button>
   </div>
 </dialog>
