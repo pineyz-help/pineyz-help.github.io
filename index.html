@@ -163,8 +163,16 @@
   .skills { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 30px; padding: 0; list-style: none; }
   .skills li { background: rgba(255,255,255,.08); border-radius: 10px; padding: 8px 12px; font-size: 15px; }
   .join .btn-ghost { color: #f4efe4; }
-  .list-box { border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius); padding: 24px; background: rgba(255,255,255,.04); margin-top: 36px; scroll-margin-top: 90px; }
+  .list-box { scroll-margin-top: 90px; border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius); padding: 24px; background: rgba(255,255,255,.04); margin-top: 36px; scroll-margin-top: 90px; }
   .list-box .skills { margin: 4px 0 22px; }
+  .join .lead { margin: 10px 0 0; }
+  .step { position: relative; padding-left: 76px; margin-top: 20px; }
+  .step-n {
+    position: absolute; left: 22px; top: 22px; width: 38px; height: 38px; border-radius: 50%;
+    background: var(--orange); color: #fff; display: grid; place-items: center;
+    font-family: "Fraunces", serif; font-weight: 800; font-size: 20px;
+  }
+  @media (max-width: 560px) { .step { padding-left: 24px; padding-top: 74px; } .step-n { left: 24px; } }
   .small-note { margin: 14px 0 0; font-size: 14px; color: #c3c9c0; }
   .list-box h3 { color: #fff; margin-bottom: 8px; }
   .list-box p { margin: 0 0 18px; color: #c3c9c0; font-size: 16px; }
@@ -186,8 +194,8 @@
     <a class="brand" href="#">Piney-Z <span class="tag">Help</span></a>
     <nav>
       <a href="#about">About</a>
-      <a href="#join">Stay in the loop</a>
       <a href="#volunteer">Volunteer</a>
+      <a href="#loop">Or just listen in</a>
       <a href="#done">What we've done</a>
     </nav>
     <a class="btn btn-orange" href="tel:+18505083315">Call</a>
@@ -245,16 +253,11 @@
   <section class="join" id="join">
     <div class="wrap">
       <div>
-        <div class="eyebrow">Email list</div>
-        <h2>Stay in the loop.</h2>
-        <p class="lead">When a neighbor could use a hand, the word goes out on our email list. You're welcome to join just to listen in. There's no commitment, and you can pitch in only when it suits you.</p>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
-          <a class="btn btn-orange" href="https://groups.google.com/g/pineyz-help" target="_blank" rel="noopener">Join the email list</a>
-        </div>
-        <p class="small-note">Joining online uses a Google account. Don't have one? Text Rick your email address and he'll add you.</p>
+        <div class="eyebrow">Get involved</div>
+        <h2>As much or as little as you like.</h2>
         <div class="list-box" id="volunteer">
-          <h3>Volunteer Signup</h3>
-          <p>Become a Piney-Z Help volunteer. Let Rick know what you can help with, and he'll reach out when a neighbor needs exactly that. No special skills needed, just a willingness to show up.</p>
+          <h3>Volunteer</h3>
+          <p>Got a truck, tools, or hands? Tell Rick what you're good at, and he'll call you when something comes up that fits. No special skills needed, just a willingness to show up.</p>
           <ul class="skills">
             <li>💪 An extra pair of hands</li>
             <li>🛻 Have a truck</li>
@@ -266,6 +269,12 @@
             <li>☎️ Checking in on folks</li>
           </ul>
           <a class="btn btn-orange" href="tel:+18505083315">Call or Text Rick (850) 508-3315</a>
+        </div>
+        <div class="list-box" id="loop">
+          <h3>Just listen in</h3>
+          <p>No commitment. Join our email list to hear what's going on and when a neighbor could use a hand. If something comes up that you can help with, great.</p>
+          <a class="btn btn-orange" href="https://groups.google.com/g/pineyz-help" target="_blank" rel="noopener">Join the email list</a>
+          <p class="small">Joining online uses a Google account. Don't have one? Text Rick your email address and he'll add you.</p>
         </div>
       </div>
       <div class="keytag">
@@ -280,23 +289,12 @@
       <h2>Neighbors at work.</h2>
       <h3 class="ba-date">October 24, 2026</h3>
       <div class="gallery">
-        <a href="img/2026-10-24/01.jpg" target="_blank" rel="noopener" style="--r:0.750"><img src="img/2026-10-24/01.jpg" width="480" height="640" alt="The lawn and brush line behind the house before the work" loading="lazy"></a>
         <a href="img/2026-10-24/02.jpg" target="_blank" rel="noopener" style="--r:0.750"><img src="img/2026-10-24/02.jpg" width="480" height="640" alt="A fallen pine lying across the brush at the edge of the lawn" loading="lazy"></a>
-        <a href="img/2026-10-24/03.jpg" target="_blank" rel="noopener" style="--r:0.750"><img src="img/2026-10-24/03.jpg" width="480" height="640" alt="The fallen pine half hidden in the undergrowth" loading="lazy"></a>
-        <a href="img/2026-10-24/04.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/04.jpg" width="1500" height="1129" alt="Two volunteers fixing a chainsaw chain next to a generator" loading="lazy"></a>
         <a href="img/2026-10-24/05.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/05.jpg" width="1500" height="1129" alt="Two volunteers kneeling over the chainsaw, logs behind them" loading="lazy"></a>
-        <a href="img/2026-10-24/06.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/06.jpg" width="1500" height="1129" alt="Putting the chain back on the saw" loading="lazy"></a>
-        <a href="img/2026-10-24/07.jpg" target="_blank" rel="noopener" style="--r:1.328"><img src="img/2026-10-24/07.jpg" width="1125" height="847" alt="Cut log rounds lined up under the trees" loading="lazy"></a>
-        <a href="img/2026-10-24/08.jpg" target="_blank" rel="noopener" style="--r:1.328"><img src="img/2026-10-24/08.jpg" width="1125" height="847" alt="Log rounds and cleared brush in the woods" loading="lazy"></a>
-        <a href="img/2026-10-24/09.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/09.jpg" width="1129" height="1500" alt="A volunteer coiling an extension cord next to the generator and saws" loading="lazy"></a>
-        <a href="img/2026-10-24/10.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/10.jpg" width="1129" height="1500" alt="A volunteer bending over a log among the trees" loading="lazy"></a>
-        <a href="img/2026-10-24/11.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/11.jpg" width="1129" height="1500" alt="A volunteer checking cut log rounds" loading="lazy"></a>
-        <a href="img/2026-10-24/12.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/12.jpg" width="1129" height="1500" alt="A volunteer looking over a split log" loading="lazy"></a>
-        <a href="img/2026-10-24/13.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/13.jpg" width="1500" height="1129" alt="A volunteer walking back from the woods past the generator and saws" loading="lazy"></a>
-        <a href="img/2026-10-24/14.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/14.jpg" width="1129" height="1500" alt="A volunteer pulling a wheelbarrow past the firewood pile" loading="lazy"></a>
-        <a href="img/2026-10-24/15.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/15.jpg" width="1129" height="1500" alt="Two volunteers packing up cords and the wheelbarrow" loading="lazy"></a>
         <a href="img/2026-10-24/16.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/16.jpg" width="1129" height="1500" alt="A volunteer smiling, coiling a red extension cord" loading="lazy"></a>
-        <a href="img/2026-10-24/17.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/17.jpg" width="1500" height="1129" alt="Two volunteers chatting in the yard after the job" loading="lazy"></a>
+        <a href="img/2026-10-24/07.jpg" target="_blank" rel="noopener" style="--r:1.328"><img src="img/2026-10-24/07.jpg" width="1125" height="847" alt="Cut log rounds lined up under the trees" loading="lazy"></a>
+        <a href="img/2026-10-24/14.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/14.jpg" width="1129" height="1500" alt="A volunteer pulling a wheelbarrow past the firewood pile" loading="lazy"></a>
+        <a href="img/2026-10-24/13.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/13.jpg" width="1500" height="1129" alt="A volunteer walking back from the woods past the generator and saws" loading="lazy"></a>
       </div>
     </div>
   </section>
