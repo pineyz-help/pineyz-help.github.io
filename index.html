@@ -305,6 +305,21 @@
 </footer>
 
 <script>
+  // Android Chrome only downloads .vcf files; hand off to the Contacts app's "new contact" screen instead.
+  if (/Android/i.test(navigator.userAgent)) {
+    var ac = document.querySelector('.add-contact');
+    if (ac) {
+      var e = encodeURIComponent;
+      ac.removeAttribute('download');
+      ac.href = 'intent:#Intent;action=android.intent.action.INSERT;type=vnd.android.cursor.dir/contact' +
+        ';S.name=' + e('Piney-Z Help') +
+        ';S.phone=' + e('+18505083315') +
+        ';S.email=' + e('pineyz-help@googlegroups.com') +
+        ';S.company=' + e('Piney-Z Help') +
+        ';S.job_title=' + e('Rick Hays, Coordinator') +
+        ';S.browser_fallback_url=' + e(location.origin + '/piney-z-help.vcf') + ';end';
+    }
+  }
   document.querySelectorAll('.copy').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var text = btn.getAttribute('data-copy');
