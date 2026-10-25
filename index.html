@@ -132,7 +132,9 @@
   .fine b { color: #fff; }
 
   /* What we've done */
-  .ba { display: grid; grid-template-columns: 1fr 1.6fr; gap: 16px; margin-top: 36px; }
+  .ba { display: grid; grid-template-columns: 1fr 1.6fr; gap: 16px; margin-top: 20px; height: 520px; }
+  .ba a, .ba figure { display: block; height: 100%; }
+  .ba + .gallery { margin-top: 16px; }
   .ba figure { margin: 0; position: relative; }
   .ba img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); max-height: 520px; }
   .ba .label {
@@ -149,7 +151,8 @@
   .strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
   .strip img { border-radius: var(--radius); aspect-ratio: 1; object-fit: cover; width: 100%; }
   @media (max-width: 760px) {
-    .ba { grid-template-columns: 1fr; }
+    .ba { grid-template-columns: 1fr; height: auto; }
+    .ba img { height: auto; max-height: 460px; }
     .strip { grid-template-columns: 1fr 1fr; }
     .strip img:last-child { display: none; }
   }
@@ -279,8 +282,8 @@
   <section class="discussion" id="discussion">
     <div class="wrap">
       <div class="eyebrow">Join the discussion</div>
-      <h2>Anyone can join.</h2>
-      <p class="lead">No need to volunteer to be part of it. Piney-Z Help has a discussion forum, run as an email list, where neighbors and volunteers talk things over: who has a truck free on Saturday, how a job went, ideas for the neighborhood. No commitment. Read along, and chime in whenever you like.</p>
+      <h2>No need to volunteer to be involved.</h2>
+      <p class="lead">Anyone can join the Piney-Z Help discussion forum, run as an email list, where neighbors and volunteers talk things over: who has a truck free on Saturday, how a job went, ideas for the neighborhood. No commitment. Read along, and chime in whenever you like.</p>
       <div style="margin-top:26px">
         <a class="btn btn-orange" href="https://groups.google.com/g/pineyz-help" target="_blank" rel="noopener">Join the discussion</a>
       </div>
@@ -293,11 +296,19 @@
       <div class="eyebrow">What we've done</div>
       <h2>Neighbors at work.</h2>
       <h3 class="ba-date">October 24, 2026</h3>
+      <div class="ba">
+        <a href="img/2026-10-24/02.jpg" target="_blank" rel="noopener"><figure>
+          <img src="img/2026-10-24/02.jpg" alt="A fallen pine lying across the brush at the edge of the lawn">
+          <span class="label">Before</span>
+        </figure></a>
+        <a href="img/2026-10-24/07.jpg" target="_blank" rel="noopener"><figure>
+          <img src="img/2026-10-24/07.jpg" alt="Cut log rounds lined up under the trees">
+          <span class="label after">After</span>
+        </figure></a>
+      </div>
       <div class="gallery">
-        <a href="img/2026-10-24/02.jpg" target="_blank" rel="noopener" style="--r:0.750"><img src="img/2026-10-24/02.jpg" width="480" height="640" alt="A fallen pine lying across the brush at the edge of the lawn" loading="lazy"></a>
         <a href="img/2026-10-24/05.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/05.jpg" width="1500" height="1129" alt="Two volunteers kneeling over the chainsaw, logs behind them" loading="lazy"></a>
         <a href="img/2026-10-24/16.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/16.jpg" width="1129" height="1500" alt="A volunteer smiling, coiling a red extension cord" loading="lazy"></a>
-        <a href="img/2026-10-24/07.jpg" target="_blank" rel="noopener" style="--r:1.328"><img src="img/2026-10-24/07.jpg" width="1125" height="847" alt="Cut log rounds lined up under the trees" loading="lazy"></a>
         <a href="img/2026-10-24/14.jpg" target="_blank" rel="noopener" style="--r:0.753"><img src="img/2026-10-24/14.jpg" width="1129" height="1500" alt="A volunteer pulling a wheelbarrow past the firewood pile" loading="lazy"></a>
         <a href="img/2026-10-24/13.jpg" target="_blank" rel="noopener" style="--r:1.329"><img src="img/2026-10-24/13.jpg" width="1500" height="1129" alt="A volunteer walking back from the woods past the generator and saws" loading="lazy"></a>
       </div>
