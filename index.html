@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piney-Z Help</title>
+<meta name="description" content="A volunteer group of Piney-Z neighbors for when something out of the ordinary happens and you need a hand.">
+<meta property="og:title" content="Piney-Z Help — neighbors who show up">
+<meta property="og:description" content="When something out of the ordinary happens, call a neighbor: (850) 508-3315.">
+<meta property="og:image" content="https://pineyz-help.org/img/hero-chainsaw.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8782a'/%3E%3Cpath d='M32 50s-16-9.5-16-21a9 9 0 0 1 16-5.6A9 9 0 0 1 48 29c0 11.5-16 21-16 21z' fill='%23fff8ee'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fbf6ee;
+    --paper-2: #f3eadb;
+    --ink: #1f2a22;
+    --ink-soft: #4b574e;
+    --pine: #1f4a36;
+    --pine-2: #2c6249;
+    --orange: #e8782a;
+    --orange-ink: #b4520f;
+    --line: #e2d6c2;
+    --radius: 18px;
+    --wrap: 1120px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 18px/1.6 "Public Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.08; margin: 0; letter-spacing: -0.01em; }
+  h2 { font-size: clamp(32px, 4.6vw, 52px); font-weight: 700; }
+  h3 { font-size: 22px; font-weight: 700; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+  .eyebrow {
+    font: 700 13px/1 "Public Sans", sans-serif; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--orange-ink); margin-bottom: 14px;
+  }
+  .lead { font-size: 20px; color: var(--ink-soft); max-width: 40em; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 22px; border-radius: 999px; font-weight: 700; text-decoration: none;
+    border: 2px solid transparent; transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-orange { background: var(--orange); color: #fff; }
+  .btn-orange:hover { background: var(--orange-ink); }
+  .btn-ghost { border-color: currentColor; }
+  .btn svg { width: 20px; height: 20px; }
+
+  /* Header */
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: "Fraunces", serif; font-weight: 800; font-size: 22px; }
+  .brand .tag {
+    background: var(--orange); color: #fff8ee; border-radius: 7px; padding: 2px 8px 3px;
+    font-size: 15px; transform: rotate(-4deg); display: inline-block;
+  }
+  header.top nav { display: flex; gap: 22px; font-weight: 500; font-size: 16px; }
+  header.top nav a { text-decoration: none; color: var(--ink-soft); }
+  header.top nav a:hover { color: var(--ink); }
+  header.top .btn { padding: 9px 16px; font-size: 15px; }
+  @media (max-width: 820px) { header.top nav { display: none; } }
+
+  /* Hero */
+  .hero { padding: 56px 0 72px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(44px, 7vw, 84px); font-weight: 800; }
+  .hero h1 em { font-style: italic; color: var(--pine-2); }
+  .hero p.lead { margin: 22px 0 30px; }
+  .hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  .phone-big {
+    display: block; margin-top: 26px; font-family: "Fraunces", serif; font-weight: 800;
+    font-size: clamp(30px, 4vw, 40px); text-decoration: none; color: var(--pine);
+  }
+  .phone-big small { display: block; font: 500 14px/1.4 "Public Sans", sans-serif; color: var(--ink-soft); letter-spacing: .02em; }
+  .email-line { margin: 8px 0 0; font-size: 16px; color: var(--ink-soft); }
+  .email-line a { color: var(--pine); font-weight: 700; text-underline-offset: 3px; }
+  .hero figure { margin: 0; }
+  .hero figure img { border-radius: 26px; aspect-ratio: 4/3.4; object-fit: cover; width: 100%; box-shadow: 0 30px 60px -30px rgba(31,42,34,.45); }
+  @media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } }
+
+  /* When to call */
+  section { padding: 84px 0; }
+  .when { background: var(--pine); color: #f4efe4; }
+  .when .eyebrow { color: #ffb27a; }
+  .when .lead { color: #c9d6cc; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+  @media (max-width: 860px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+    border-radius: var(--radius); padding: 24px;
+  }
+  .card .ic { width: 44px; height: 44px; border-radius: 12px; background: var(--orange); display: grid; place-items: center; margin-bottom: 16px; }
+  .card .ic svg { width: 24px; height: 24px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .card p { margin: 8px 0 0; color: #c9d6cc; font-size: 16px; }
+  .fine {
+    margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;
+    font-size: 16px; color: #c9d6cc;
+  }
+  .fine div { border-top: 1px solid rgba(255,255,255,.18); padding-top: 14px; }
+  .fine b { color: #fff; }
+
+  /* What we've done */
+  .ba { display: grid; grid-template-columns: 1fr 1.6fr; gap: 16px; margin-top: 36px; }
+  .ba figure { margin: 0; position: relative; }
+  .ba img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); max-height: 520px; }
+  .ba .label {
+    position: absolute; top: 14px; left: 14px; background: var(--ink); color: #fff; font-weight: 700;
+    font-size: 13px; letter-spacing: .1em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px;
+  }
+  .ba .label.after { background: var(--orange); }
+  .strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .strip img { border-radius: var(--radius); aspect-ratio: 1; object-fit: cover; width: 100%; }
+  @media (max-width: 760px) {
+    .ba { grid-template-columns: 1fr; }
+    .strip { grid-template-columns: 1fr 1fr; }
+    .strip img:last-child { display: none; }
+  }
+
+  /* Join */
+  .join { background: var(--ink); color: #f4efe4; }
+  .join .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
+  .join .eyebrow { color: #ffb27a; }
+  .join .lead { color: #c3c9c0; }
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 30px; padding: 0; list-style: none; }
+  .skills li { background: rgba(255,255,255,.08); border-radius: 10px; padding: 8px 12px; font-size: 15px; }
+  .join .btn-ghost { color: #f4efe4; }
+  .list-box { border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius); padding: 24px; background: rgba(255,255,255,.04); margin-top: 36px; scroll-margin-top: 90px; }
+  .list-box .skills { margin: 4px 0 22px; }
+  .small-note { margin: 14px 0 0; font-size: 14px; color: #c3c9c0; }
+  .list-box h3 { color: #fff; margin-bottom: 8px; }
+  .list-box p { margin: 0 0 18px; color: #c3c9c0; font-size: 16px; }
+  .list-box p.small { margin: 16px 0 0; font-size: 14px; }
+  .keytag img { border-radius: 24px; transform: rotate(2deg); box-shadow: 0 30px 60px -20px rgba(0,0,0,.6); aspect-ratio: 1; object-fit: cover; object-position: 50% 15%; width: 100%; }
+  .keytag p { font-size: 15px; color: #c3c9c0; margin: 18px 0 0; }
+  @media (max-width: 860px) { .join .wrap { grid-template-columns: 1fr; } }
+
+  /* Footer */
+  footer { padding: 48px 0 60px; font-size: 15px; color: var(--ink-soft); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  footer .em { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; color: var(--ink); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Piney-Z <span class="tag">Help</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#done">What we've done</a>
+      <a href="#join">Stay in the loop</a>
+      <a href="#volunteer">Volunteer</a>
+    </nav>
+    <a class="btn btn-orange" href="tel:+18505083315">Call</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Neighbors helping neighbors</div>
+        <h1>Something out of the ordinary? <em>Call a neighbor.</em></h1>
+        <p class="lead">Piney-Z Help is a group of volunteers from this neighborhood. When something unexpected comes up and you could use a hand, give us a call.</p>
+        <div class="ctas">
+          <a class="btn btn-orange" href="tel:+18505083315">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            Call
+          </a>
+          <a class="btn btn-ghost" href="sms:+18505083315">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Text
+          </a>
+        </div>
+        <a class="phone-big" href="tel:+18505083315">
+          <small>Rick Hays, Coordinator</small>
+          (850) 508-3315
+        </a>
+        <p class="email-line">Or email <a href="mailto:pineyz-help@googlegroups.com">pineyz-help@googlegroups.com</a></p>
+      </div>
+      <figure>
+        <img src="img/hero-chainsaw.jpg" alt="Two volunteers kneeling in a yard, working on a piece of equipment together">
+      </figure>
+    </div>
+  </section>
+
+  <section class="when" id="about">
+    <div class="wrap">
+      <h2>Nobody should have to go it alone.</h2>
+      <p class="lead">Life sometimes catches us off guard. When it does, it helps to know there are people nearby who'll pitch in. That's all this is: neighbors looking out for each other.</p>
+      <div class="fine">
+        <div><b>Free.</b> We're neighbors, not a business.</div>
+        <div><b>For everyone.</b> Every street and every household, no matter who you are or how long you've lived here.</div>
+        <div><b>Just ask.</b> Call or text, and we'll see what we can do.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="done">
+    <div class="wrap">
+      <div class="eyebrow">What we've done</div>
+      <h2>Neighbors at work.</h2>
+      <div class="ba">
+        <figure>
+          <img src="img/tree-before.jpg" alt="A large fallen pine lying across brush at the edge of a lawn">
+          <span class="label">Before</span>
+        </figure>
+        <figure>
+          <img src="img/tree-after.jpg" alt="The same pine cut into log rounds lined up under the trees">
+          <span class="label after">After</span>
+        </figure>
+      </div>
+      <div class="strip">
+        <img src="img/rick-wheelbarrow.jpg" alt="A volunteer pulling a wheelbarrow past a pile of split firewood">
+        <img src="img/volunteer-logs.jpg" alt="A volunteer in work gloves checking split logs">
+        <img src="img/crew-wide.jpg" alt="Two volunteers kneeling over a chainsaw next to a generator in a yard">
+      </div>
+    </div>
+  </section>
+
+  <section class="join" id="join">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Email list</div>
+        <h2>Stay in the loop.</h2>
+        <p class="lead">When a neighbor could use a hand, the word goes out on our email list. You're welcome to join just to listen in. There's no commitment, and you can pitch in only when it suits you.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+          <a class="btn btn-orange" href="https://groups.google.com/g/pineyz-help" target="_blank" rel="noopener">Join the email list</a>
+        </div>
+        <p class="small-note">Joining online uses a Google account. Don't have one? Text Rick your email address and he'll add you.</p>
+        <div class="list-box" id="volunteer">
+          <h3>Volunteer Signup</h3>
+          <p>Become a Piney-Z Help volunteer. Let Rick know what you can help with, and he'll reach out when a neighbor needs exactly that. No special skills needed, just a willingness to show up.</p>
+          <ul class="skills">
+            <li>💪 An extra pair of hands</li>
+            <li>🛻 Have a truck</li>
+            <li>🚗 Can drive</li>
+            <li>🍲 Can cook</li>
+            <li>🐕 Good with pets</li>
+            <li>🔧 Handy</li>
+            <li>💻 Tech</li>
+            <li>☎️ Checking in on folks</li>
+          </ul>
+          <a class="btn btn-orange" href="tel:+18505083315">Call or Text Rick (850) 508-3315</a>
+        </div>
+      </div>
+      <div class="keytag">
+        <img src="img/keychain.jpg" alt="An orange 3D-printed keychain on a key ring reading Rick Hays, 850 508 3315, pineyz-help.org">
+        <p>Have one of these orange keychains? Keep it on your keys so the number is there when you need it.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b style="color:var(--ink)">Piney-Z Help</b> · Rick Hays, Coordinator · pineyz-help.org<br>
+      An independent volunteer effort by Piney-Z neighbors.<br>
+      Not affiliated with the Piney-Z HOA or CDD.
+    </div>
+    <div class="em">For emergencies call <b>911</b></div>
+  </div>
+</footer>
+
+</body>
+</html>
