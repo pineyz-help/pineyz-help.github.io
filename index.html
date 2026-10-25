@@ -180,8 +180,11 @@
   .discussion { background: var(--paper-2); }
   .discussion .small-note { color: var(--ink-soft); }
   .join .skills { margin: 22px 0 28px; }
-  .join-email { margin: 24px 0 0; font-size: 18px; }
-  .join-email a { color: var(--pine); font-weight: 700; text-underline-offset: 3px; }
+  .join-main { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+  .join-email { margin: 0; font-size: 17px; }
+  .join-email .addr { font-weight: 700; color: var(--pine); user-select: all; -webkit-user-select: all; }
+  .join-alt { margin: 22px 0 0; font-size: 16px; color: var(--ink-soft); display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .btn-sm { padding: 9px 16px; font-size: 15px; color: var(--ink); }
   dialog#board-dialog {
     border: none; border-radius: var(--radius); padding: 28px; max-width: 460px; width: calc(100% - 32px);
     background: var(--paper); color: var(--ink); box-shadow: 0 30px 80px -20px rgba(0,0,0,.45);
@@ -304,12 +307,16 @@
     <div class="wrap">
       <h2>Stay Close</h2>
       <p class="lead">No need to volunteer to be part of Piney-Z Help. Anyone can join our discussion forum / email list, where neighbors and volunteers talk things over: who has a truck free on Saturday, how a job went, ideas for the neighborhood. No commitment. Read along, and chime in whenever you like.</p>
-      <p class="join-email">Join by emailing <a href="mailto:pineyz-help@googlegroups.com?subject=Please%20add%20me">pineyz-help@googlegroups.com</a>
-        <button type="button" class="copy copy-sm" data-copy="pineyz-help@googlegroups.com" aria-label="Copy email address">Copy</button><br>
-        or join the online discussion board:</p>
-      <div style="margin-top:14px">
-        <a class="btn btn-orange" id="board-btn" href="https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fgroups.google.com%2Fg%2Fpineyz-help%2Fabout" target="_blank" rel="noopener">Online discussion board</a>
+      <div class="join-main">
+        <a class="btn btn-orange" href="mailto:pineyz-help@googlegroups.com?subject=Please%20add%20me">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          Email us to join
+        </a>
+        <p class="join-email"><span class="addr">pineyz-help@googlegroups.com</span>
+          <button type="button" class="copy copy-sm" data-copy="pineyz-help@googlegroups.com" aria-label="Copy email address">Copy</button></p>
       </div>
+      <p class="join-alt">Prefer the online board?
+        <a class="btn btn-ghost btn-sm" id="board-btn" href="https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fgroups.google.com%2Fg%2Fpineyz-help%2Fabout" target="_blank" rel="noopener">Open discussion board</a></p>
     </div>
   </section>
 
